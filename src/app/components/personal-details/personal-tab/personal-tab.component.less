@@ -1,0 +1,39 @@
+@import "./../../../../styles/variables";
+
+
+.form {
+    display: flex;
+
+    &__column {
+        width: 300px;
+        margin-right: 40px;
+    }
+    
+    &__input {
+        display: inline-block;
+        width: 100%;
+
+        .mat-input-container {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: @mobile) {
+    .form {
+        flex-direction: column;
+        
+        &__column {
+            width: 460px;
+            display: block;
+            margin-right: 0;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .form__column {
+        width: 100%;
+    }
+}

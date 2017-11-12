@@ -1,0 +1,20 @@
+form.form([formGroup]='form')
+    .form__column
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='country',
+                        [readonly]='true',
+                        placeholder='country')
+
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='city',
+                        placeholder='city')
+
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='state',
+                        placeholder='state')

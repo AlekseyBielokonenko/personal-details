@@ -1,0 +1,29 @@
+@import "./../../../styles/variables";
+
+
+.hello {
+    padding: 20px;
+
+    &__message {
+        padding: 20px 0;
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+
+        button {
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+@media (max-width: @mobile) {
+    .hello {
+        text-align: center;
+        padding: 12px;
+    }
+}

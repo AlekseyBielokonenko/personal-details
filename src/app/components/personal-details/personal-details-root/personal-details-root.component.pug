@@ -1,0 +1,15 @@
+.container
+    ul.tabs
+        li.tabs__item(  [routerLinkActive]="['tabs__item--active']")
+            a([routerLink]="'personal'") personal tab
+        li.tabs__item(  [routerLinkActive]="['tabs__item--active']")
+            a([routerLink]="'location'") location tab
+
+    .tab-container
+        router-outlet
+    
+    .button-container
+        button( md-raised-button,
+                (click)='onSubmit()') submit
+
+        .saved-message(*ngIf='showSaved') Saved

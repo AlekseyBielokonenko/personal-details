@@ -1,0 +1,17 @@
+@import "./../styles/variables";
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .main-container {
+        width: @pageWidth;
+    }
+}
+
+@media (max-width: @mobile) {
+    .wrapper .main-container {
+        width: 100%;
+    }
+}

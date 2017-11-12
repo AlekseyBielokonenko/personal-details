@@ -1,0 +1,17 @@
+.hello
+    h2 Hello!
+
+    .hello__message 
+        span Hi my name is {{ getProp('name') }}. 
+        span(*ngIf='personalData?.dob') I was born on {{ personalData.dob | date: 'MM/dd/yyyy' }}. 
+        span I'm from 
+            span(*ngIf='personalData?.state') {{ personalData.state }}, 
+            span(*ngIf='personalData?.city') {{ personalData.city }}, 
+            span {{ getProp('country') }}. 
+        span 
+            | You can contact me at {{ getProp('email') }} 
+            | or {{ getProp('phone.countryCode') }} {{ getProp('phone.number') }}.
+
+    .hello__button
+        button( md-raised-button,
+                (click)='toPersonalDetails()') back

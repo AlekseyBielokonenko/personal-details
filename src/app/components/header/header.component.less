@@ -1,0 +1,52 @@
+@import "./../../../styles/variables";
+
+@headerPadding: 12px;
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: @darkGrey;
+}
+
+.header {
+    text-align: right;
+    padding: 0 @headerPadding;
+    margin: 0;
+    width: @pageWidth;
+}
+
+.links {
+    list-style: none;
+    margin: 0;
+    padding-right: 20px;
+
+    .active-link {
+        background-color: #ffffff;
+        a {
+            color: @darkGrey;
+        }
+    }
+
+    li {    
+        display: inline-block;
+        padding: @headerPadding + 1px;
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: @mobile) {
+    .header {
+        width: 100%;
+        padding: 0;
+    }
+
+    .links {
+        padding-right: 0;
+    }
+}

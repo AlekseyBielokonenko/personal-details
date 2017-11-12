@@ -1,0 +1,40 @@
+form.form([formGroup]='form')
+    .form__column
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='name',
+                        placeholder='name')
+
+
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='email',
+                        placeholder='email')
+
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='dob',
+                        [mdDatepicker]='picker',
+                        placeholder='Date of birth')
+                button( mdSuffix,
+                        [mdDatepickerToggle]='picker')
+                md-datepicker(#picker='')
+
+
+    .form__column(formGroupName='phone')
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='countryCode',
+                        [readonly]='true',
+                        placeholder='country code')
+
+        .form__input
+            md-input-container
+                input(  mdInput,
+                        formControlName='number',
+                        placeholder='number')
+
