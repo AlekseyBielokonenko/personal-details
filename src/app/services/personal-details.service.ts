@@ -9,6 +9,7 @@ export class PersonalDetailsService {
 
     private ls: Storage;
     private readonly lsKey = 'personal-details';
+    private timer;
 
     constructor() {
         if (window.localStorage) {
@@ -36,7 +37,8 @@ export class PersonalDetailsService {
             this.ls.setItem(this.lsKey, JSON.stringify(dataToSave));
 
             this.showSaved = true;
-            setTimeout(() => this.showSaved = false, 2000);
+            clearTimeout(this.timer);
+            this.timer = setTimeout(() => this.showSaved = false, 2000);
         }
     }
 
